@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Game</title>
+        <style>
+            body { background-image: url("http://vignette3.wikia.nocookie.net/wartune/images/6/69/Arena_Battle_Background.jpeg/revision/latest?cb=20140611222320") }
+        </style>
+    </head>
+    <body>
+        <h1>
+         Welcome to the game   
+        </h1>
+        <script>
+            var swag = function() {
+             
+                var userCharge = 0;
+             
+                var computerCharge = 0;
+                    
+                for (var i = 1; i < 99; i++)
+                 {
+               
+                     if(i === 99) {
+                            i = 100; 
+                            alet("You took to long and fainted."); } else {  }
+            
+                     if( 1 === 0) { f = f + 1; } else {  }
+                
+                alert("turn "+i);
+                    
+                     var userChoice = prompt("Do you want to attack, charge or shield?");
+var computerChoice = Math.random();
+if (computerChoice < 0.34) {
+	computerChoice = "charge";
+} else if(computerChoice <= 0.67) {
+	computerChoice = "shield";
+} else {
+	computerChoice = "attack";
+ 
+} 
+                        
+                     if(computerChoice === "charge") {
+                    computerCharge = computerCharge + 1; 
+                    
+                    if(userChoice === "charge") { alert("You and your opponent charge.");
+                                                 userCharge = userCharge + 1;
+                                                }
+                else if(userChoice === "shield") { alert("You shield and your opponent charges."); }
+            
+                    else if(userChoice === "attack") { 
+     
+     if(userCharge > 0) { alert("You attack while your opponent charges so you win!.");
+                         
+                         i = 100; } else { alert("You try to attack but you have no charge so you fail while your opponent charges.");
+                                         } 
+ } 
+                }
+            
+                     else if(computerChoice === "shield") {if(userChoice === "charge") { alert("You charge and your opponent shields."); 
+                                                                                  userCharge = userCharge + 1; }
+                else if(userChoice === "shield") { alert("You and you opponent shield"); }
+                                                      else if(userChoice === "attack") { if(userCharge > 0) { userCharge = userCharge - 1; 
+                                                                                                            alert("You attack but your opponent shields."); } else { alert("You try to attack but because you have no charge fail while your opponent shields"); } } }
+                
+                     else if(computerChoice === "attack") { 
+                    
+                    if(userChoice === "charge") { 
+                    userCharge = userCharge + 1
+                    
+                    
+                    if(computerCharge > 0) {
+                    alert("you lose, your opponent attacks while you charge!");
+                     
+                        i = 100 } else { alert("Your opponent tries to attack but has no charge so you charge unharmed."); userCharge = userCharge + 1; } } 
+                    
+              
+                    else if(userChoice === "shield") {
+                    
+                    if(computerCharge > 0) {
+                    
+                    computerCharge = computerCharge - 1;
+                        alert("Your opponent attacks but you block them."); } else { alert("Your opponent tries to attack but it fails because they have no charge, you then block."); }        }
+                      
+                    else if(userChoice === "attack") { 
+                
+                    if(computerCharge > 0) {
+                        
+                        if(userCharge > 0) {
+                            alert("You and your opponent both attack and draw because you kill each other.") 
+                            i = 100;
+                        } else { alert("You both attack but you fail because you have no chage. But your opponent does not fail and you lose!."); 
+                               i = 100 }
+                        
+                    } else {
+                
+                    if(userCharge > 0) { 
+                    alert("You attack and so does your opponent who has no charge so you win"); 
+                        i = 100;
+                    
+                    } else { alert("you and your opponent both try to attack and fail because you have no charge."); }
+                    
+                    
+                
+                    } 
+                    
+                    }
+                 
+                     }
+                
+            
+                     if(userChoice === "charge") { }
+                     else if(userChoice === "shield" ) { }
+                     else if(userChoice === "attack" ) { }
+                     else { alert("While you mess around your opponent attacks and kills you.")
+                                  i = 100; }
+            }
+            
+            }
+        </script>
+        <p>
+        In this game there are three options a turn. charge to get a energy, attack to use energy and kill, shield to block attacks from opponents. In this arena game you need to kill or be killed.
+        </p>
+        <button onclick="swag()">Start Game</button>
+    </body>
+</html>
